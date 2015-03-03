@@ -1,0 +1,14 @@
+rootfs / rootfs rw 0 0
+/proc /proc proc rw,relatime 0 0
+/sys /sys sysfs rw,relatime 0 0
+udev /dev devtmpfs rw,relatime,size=8134636k,nr_inodes=2033659,mode=755 0 0
+devpts /dev/pts devpts rw,relatime,gid=5,mode=620,ptmxmode=000 0 0
+tmpfs /dev/shm tmpfs rw,relatime 0 0
+/dev/sda3 / ext4 rw,relatime,barrier=1,data=ordered 0 0
+/proc/bus/usb /proc/bus/usb usbfs rw,relatime 0 0
+/dev/sda1 /boot ext4 rw,relatime,barrier=1,data=ordered 0 0
+/dev/sda2 /usr/local ext4 rw,relatime,barrier=1,data=ordered 0 0
+none /proc/sys/fs/binfmt_misc binfmt_misc rw,relatime 0 0
+sunrpc /var/lib/nfs/rpc_pipefs rpc_pipefs rw,relatime 0 0
+/etc/auto.misc /misc autofs rw,relatime,fd=7,pgrp=1716,timeout=300,minproto=5,maxproto=5,indirect 0 0
+-hosts /net autofs rw,relatime,fd=13,pgrp=1716,timeout=300,minproto=5,maxproto=5,indirect 0 0
